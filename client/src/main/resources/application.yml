@@ -1,0 +1,17 @@
+server:
+  port: 10011
+spring:
+  application:
+    name: no-loss-producer
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: xx
+    password: xxx
+    virtual-host: /
+    listener:
+      simple:
+        concurrency: 5 # 并发数
+        max-concurrency: 10 # 最大并发送
+        acknowledge-mode: manual # 手动确认模式
+        prefetch: 10 # 处理量 = concurrency * prefetch

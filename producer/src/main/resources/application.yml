@@ -1,0 +1,14 @@
+server:
+  port: 10001
+spring:
+  application:
+    name: no-loss-producer
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: xxx
+    password: xxx
+    virtual-host: /
+    # 开启消息接收确认和发布确认
+    publisher-returns: true
+    publisher-confirms: true
